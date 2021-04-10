@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-18.04
     env:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID_TO_NOTIFY: ${{ secrets.TELEGRAM_CHAT_ID_TO_NOTIFY }}
+      TELEGRAM_API_URL: ${{ secrets.TELEGRAM_API_URL }}
+      REMOTEOK_API_URL: ${{ secrets.REMOTEOK_API_URL }}
+      REMOTEOK_WEBSITE_URL: ${{ secrets.REMOTEOK_WEBSITE_URL }}
+      JOB_TAGS: ${{ secrets.JOB_TAGS }}
+      JOBS_PER_TAG: ${{ secrets.JOBS_PER_TAG }}
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
